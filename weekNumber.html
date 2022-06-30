@@ -1,35 +1,28 @@
-<!DOCTYPE html>
-<html>
-<body>
+<style>
+    div{
+        padding: 5px;
+    }
+    b{
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 25px;
+        text-size-adjust: auto;
+        background-color: #fcb103;
+        border: solid black 0px;
+        box-shadow: 3px 3px black;
+        padding: 10px;
+        border-radius: 50px;
+    }
+</style>
 
-  <style>
-      div{
-          padding: 5px;
-      }
-      b{
-          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-          font-size: 25px;
-          text-size-adjust: auto;
-          background-color: #fcb103;
-          border: solid black 0px;
-          box-shadow: 3px 3px black;
-          padding: 10px;
-          border-radius: 50px;
-      }
-  </style>
+<div>
+    <b id="week"></b>
+</div>
 
-  <div>
-      <b id="week"></b>
-  </div>
+<script>
+    currentDate = new Date();
+    startDate = new Date(currentDate.getFullYear(), 0, 1);
+    var days = Math.floor((currentDate - startDate) / (24 * 60 * 60 * 1000));
+    var weekNumber = Math.ceil(days / 7);
 
-  <script>
-      currentDate = new Date();
-      startDate = new Date(currentDate.getFullYear(), 0, 1);
-      var days = Math.floor((currentDate - startDate) / (24 * 60 * 60 * 1000));
-      var weekNumber = Math.ceil(days / 7);
-
-      document.getElementById("week").innerHTML = "Semaine n° " + weekNumber;
-  </script>
-  
- </html>
- </body>
+    document.getElementById("week").innerHTML = "Semaine n° " + weekNumber;
+</script>
