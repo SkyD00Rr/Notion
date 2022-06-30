@@ -31,16 +31,11 @@
     document.getElementById("week").innerHTML = "Semaine n° " + weekNumber;
     
 //     window.parent.document.getElementById("705464b9-0178-41c0-a1a1-318d15147ad5").setAttribute("max-height", "50px");
-    function resizeIFrameToFitContent( iFrame ) {
 
-    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
-    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
-}
 
 window.addEventListener('DOMContentLoaded', function(e) {
-
-    var iFrame = document;
-    resizeIFrameToFitContent( iFrame );
+    window.resizeBy(200, 50);
+    window.resizeTo(200, 50);
 } );
 
 </script>
