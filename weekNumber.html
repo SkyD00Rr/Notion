@@ -28,9 +28,9 @@
     var days = Math.floor((currentDate - startDate) / (24 * 60 * 60 * 1000));
     var weekNumber = Math.ceil(( currentDate.getDay() + 1 + days) / 7);
     
-    if (currentDate.getDay() == 6) weekNumber + 1;
+    if (currentDate.getDay() == 0) weekNumber - 1;
 
-    document.getElementById("week").innerHTML = "Semaine n° " + date;
+    document.getElementById("week").innerHTML = "Semaine n° " + weekNumber;
     
     window.parent.document.getElementById("705464b9-0178-41c0-a1a1-318d15147ad5").setAttribute("max-height", "50px");
 </script>
