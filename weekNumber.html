@@ -23,12 +23,14 @@
 </div>
 
 <script>
-    currentDate = new Date();
-    startDate = new Date(currentDate.getFullYear(), 0, 1);
-    var days = Math.floor((currentDate - startDate) / (24 * 60 * 60 * 1000));
-    var weekNumber = Math.ceil(( currentDate.getDay() + 1 + days) / 7);
+//     currentDate = new Date();
+//     startDate = new Date(currentDate.getFullYear(), 0, 1);
+//     var days = Math.floor((currentDate - startDate) / (24 * 60 * 60 * 1000));
+//     var weekNumber = Math.ceil(( currentDate.getDay() + 1 + days) / 7);
+    import DateTime from 'luxon/src/datetime.js';
+    const date = DateTime.now().weekNumber;
 
-    document.getElementById("week").innerHTML = "Semaine n° " + weekNumber;
+    document.getElementById("week").innerHTML = "Semaine n° " + date;
     
     window.parent.document.getElementById("705464b9-0178-41c0-a1a1-318d15147ad5").setAttribute("max-height", "50px");
 </script>
