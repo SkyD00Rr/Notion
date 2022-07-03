@@ -26,16 +26,9 @@
     currentDate = new Date();
     startDate = new Date(currentDate.getFullYear(), 0, 1);
     var days = Math.floor((currentDate - startDate) / (24 * 60 * 60 * 1000));
-    var weekNumber = Math.ceil(( currentdate.getDay() + 1 + days) / 7);
+    var weekNumber = Math.ceil(( currentDate.getDay() + 1 + days) / 7);
 
     document.getElementById("week").innerHTML = "Semaine n° " + weekNumber;
     
-//     window.parent.document.getElementById("705464b9-0178-41c0-a1a1-318d15147ad5").setAttribute("max-height", "50px");
-
-
-window.addEventListener('DOMContentLoaded', function(e) {
-    window.resizeBy(200, 50);
-    window.resizeTo(200, 50);
-} );
-
+    window.parent.document.getElementById("705464b9-0178-41c0-a1a1-318d15147ad5").setAttribute("max-height", "50px");
 </script>
